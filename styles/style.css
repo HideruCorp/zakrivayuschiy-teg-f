@@ -13,4 +13,36 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent 0px,
+    transparent 2px,
+    #d3d3d3 2px,
+    #d3d3d3 4px
+  ),
+  repeating-linear-gradient(
+    90deg,
+    transparent 0px,
+    transparent 2px,
+    #d3d3d3 2px,
+    #d3d3d3 4px
+  ),
+  linear-gradient(to bottom, #e7e7e7 0%, #1a1a1a 100%);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.cards {
+  inline-size: 696px;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  gap: 5px;
+}
+
+.card__image {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: right center;
 }

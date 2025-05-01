@@ -1,1 +1,45 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  /* Типография */
+  --main-font: "Inter", sans-serif;
+  --accent-font: "Press Start 2P", fantasy;
+  --text-weight: 400;
+  --text-font-size: 18px;
+  --accent-font-size: 14px;
+  --title-weight: 700;
+
+  /* компоновка */
+  --section-width: clamp(320px, 100%, 696px);
+  --content-block-border-width: 2px;
+
+  /* фоны */
+  --main-background-color: #d3d3d3;
+  --dots-gradient-start: #e7e7e7;
+  --dots-gradient-end: #1a1a1a;
+  --background-gradients: repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 2px,
+      var(--main-background-color) 2px,
+      var(--main-background-color) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 2px,
+      var(--main-background-color) 2px,
+      var(--main-background-color) 4px
+    ),
+    linear-gradient(to bottom, var(--dots-gradient-start) 0%, var(--dots-gradient-end) 100%);
+
+    /* цвета */
+    --content-block-background: #fff;
+    --content-block-border-color: #000;
+    --text-color: #000;
+    --stroke-color: #fff;
+    --accent-color: #f00;
+    --button-text-color: #fff;
+    --button-hover-background: #000;
+    --contour-color: #000;
+    --sparks-color: #f00; 
+}

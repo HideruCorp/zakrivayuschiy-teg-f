@@ -132,7 +132,6 @@
   right: 25px;
   font-family: var(--accent-font, "Press Start 2P", fantasy);
   font-size: 14px;
-  line-height: 1;
   color: var(--text-color, #000);
   mix-blend-mode: hard-light;
   opacity: 0.5;
@@ -174,7 +173,7 @@
   padding: 0px 25px 25px;
 }
 
-.card__button {
+.button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -189,8 +188,85 @@
 }
 
 .card__icon-button {
-  padding: 9px;
+  padding: 0;
   aspect-ratio: 1 / 1;
   background-color: transparent;
   border-color: transparent;
+}
+
+.like-icon {
+  color: transparent;
+  inline-size: 39px;
+  block-size: 36px;
+}
+
+.like-icon .stroke {
+  color: var(--contour-color, #000);
+}
+
+.footer {
+  margin-block-start: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.save-button {
+  padding: 15px 19px;
+  color: var(--text-color, #000);
+  gap: 8px;
+}
+
+.save-button .button__icon {
+  inline-size: 21px;
+  block-size: 21px;
+}
+
+.modal {
+  display: none;
+}
+
+.modal[open] {
+  display: flex;
+  font-family: var(--accent-font, "Press Start 2P", fantasy);
+  font-size: var(--accent-font-size, 14px);
+  text-transform: uppercase;
+  line-height: 1.5;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  padding: 30px 40px;
+  max-inline-size: 357px;
+  gap: 30px;
+}
+
+.modal[open]::backdrop {
+  background-color: var(--backdrop-background-color, rgb(0 0 0 / 0.75));
+}
+
+.modal__content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.modal__button {
+  inline-size: 100%;
+  text-transform: uppercase;
+}
+
+.modal__icon {
+  flex-shrink: 0;
+  inline-size: 39px;
+  block-size: 39px;
+}
+
+@media (width <= 375px) {
+  .save-button {
+    flex-flow: column nowrap;
+  }
+
+  .save-button .button__icon {
+    inline-size: 28px;
+    block-size: 28px;
+  }
 }

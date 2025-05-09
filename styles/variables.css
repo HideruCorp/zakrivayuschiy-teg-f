@@ -14,6 +14,7 @@
 
   /* фоны */
   --main-background-color: #d3d3d3;
+  --backdrop-background-color: rgb(0 0 0 / 0.75);
   --dots-gradient-start: #e7e7e7;
   --dots-gradient-end: #1a1a1a;
   --background-gradients: repeating-linear-gradient(

@@ -4,8 +4,92 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+@keyframes enlarge {
+  from {
+    transform: scale(1);
+    pointer-events: none;
+  }
+  50% {
+    transform: scale(1.25);
+    pointer-events: none;
+  }
+  to {
+    transform: scale(1);
+    pointer-events: auto;
+  }
+}
+
+@keyframes spark {
+  from {
+    color: transparent;
+  }
+  50% {
+    color: var(--accent-color, #f00);
+  }
+  to {
+    color: transparent;
+  }
+}
+
+
+.like-icon {
+  color: transparent;
+}
+
+.like-icon .core {
+  transition: color 0.3s linear;
+}
+
+.like-icon .internals {
+  transition: color 0.3s linear 0.05s;
+}
+
+.like-icon .stroke {
+  color: var(--contour-color, #000);
+}
+
+.like-icon:not(.is-liked) .stroke {
+  color: var(--contour-color, #000);
+  transition: color 0.1s linear 0s;
+}
+
+.like-icon:hover .core {
+  color: var(--contour-color, #000);
+  transition-delay: 0.03s;
+}
+
+.like-icon:hover .internals {
+  color: var(--contour-color, #000);
+  transition-delay: 0s;
+}
+
+.like-icon:active .core {
+  color: var(--accent-color, #f00);
+}
+
+.like-icon:active .internals {
+  color: var(--accent-color, #f00);
+}
+
+.like-icon.is-liked .core, 
+.like-icon.is-liked .internals, 
+.like-icon.is-liked .stroke {
+  color: var(--accent-color, #f00);
+}
+
+.like-icon.is-liked .stroke {
+  transition: color 0.3s linear 0.06s;
+}
+
+.like-icon.is-liked .heart-only {
+  animation: enlarge 0.3s ease-in 0.1s alternate;
+  transform-origin: center;
+}
+
+.like-icon.is-liked .sparks {
+  animation: spark 0.3s ease-in 0.3s alternate;
+}

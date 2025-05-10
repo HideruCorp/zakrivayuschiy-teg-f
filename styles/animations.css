@@ -8,7 +8,7 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
-@keyframes enlarge {
+@keyframes pulse {
   from {
     transform: scale(1);
     pointer-events: none;
@@ -40,53 +40,56 @@
 }
 
 .like-icon .core {
+  transition: color 0.3s linear 0.03s;
+}
+
+.like-icon .main-body {
   transition: color 0.3s linear;
 }
 
-.like-icon .internals {
-  transition: color 0.3s linear 0.05s;
-}
-
-.like-icon .stroke {
+.like-icon .contour {
   color: var(--contour-color, #000);
-}
-
-.like-icon:not(.is-liked) .stroke {
-  color: var(--contour-color, #000);
-  transition: color 0.1s linear 0s;
+  transition: color 0.1s linear;
 }
 
 .like-icon:hover .core {
   color: var(--contour-color, #000);
-  transition-delay: 0.03s;
+  transition: color 0.3s linear;
 }
 
-.like-icon:hover .internals {
+.like-icon:hover .main-body {
   color: var(--contour-color, #000);
-  transition-delay: 0s;
+  transition: color 0.3s linear 0.05s;
 }
 
 .like-icon:active .core {
   color: var(--accent-color, #f00);
+  transition: color 0.3s linear;
 }
 
-.like-icon:active .internals {
+.like-icon:active .main-body {
   color: var(--accent-color, #f00);
+  transition: color 0.3s linear 0.05s;
 }
 
-.like-icon.is-liked .core,
-.like-icon.is-liked .internals,
-.like-icon.is-liked .stroke {
+.like-icon.is-liked .core {
   color: var(--accent-color, #f00);
+  transition: color 0.3s linear;
 }
 
-.like-icon.is-liked .stroke {
+.like-icon.is-liked .main-body {
+  color: var(--accent-color, #f00);
+  transition: color 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  color: var(--accent-color, #f00);
   transition: color 0.3s linear 0.06s;
 }
 
-.like-icon.is-liked .heart-only {
+.like-icon.is-liked .heart {
   transform-origin: center;
-  animation: enlarge 0.3s ease-in 0.1s alternate;
+  animation: pulse 0.3s ease-in 0.1s alternate;
 }
 
 .like-icon.is-liked .sparks {

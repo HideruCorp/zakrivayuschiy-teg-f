@@ -134,14 +134,14 @@
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
     1px 1px 0 #fff;
   mix-blend-mode: hard-light;
-  -webkit-text-stroke: 1px var(--stroke-color, #fff);
-  text-stroke: 1px var(--stroke-color, #fff);
 }
 
 @supports (text-stroke: 1px var(--stroke-color, #fff)) or
   (-webkit-text-stroke: 1px var(--stroke-color, #fff)) {
   .card__watermark {
     text-shadow: none;
+    -webkit-text-stroke: 1px var(--stroke-color, #fff);
+    text-stroke: 1px var(--stroke-color, #fff);
   }
 }
 

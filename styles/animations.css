@@ -35,7 +35,6 @@
   }
 }
 
-
 .like-icon {
   color: transparent;
 }
@@ -75,8 +74,8 @@
   color: var(--accent-color, #f00);
 }
 
-.like-icon.is-liked .core, 
-.like-icon.is-liked .internals, 
+.like-icon.is-liked .core,
+.like-icon.is-liked .internals,
 .like-icon.is-liked .stroke {
   color: var(--accent-color, #f00);
 }
@@ -86,8 +85,8 @@
 }
 
 .like-icon.is-liked .heart-only {
-  animation: enlarge 0.3s ease-in 0.1s alternate;
   transform-origin: center;
+  animation: enlarge 0.3s ease-in 0.1s alternate;
 }
 
 .like-icon.is-liked .sparks {

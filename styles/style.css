@@ -31,10 +31,6 @@
   filter: invert(0.8);
 }
 
-.inverted-filter {
-  filter: invert(0.8);
-}
-
 .sepia-filter {
   filter: sepia(0.9);
 }
@@ -50,15 +46,15 @@
 .page {
   padding: 100px 0;
   color: var(--text-color, #000);
-  font-family: var(--main-font, 'Inter', sans-serif);
+  font-family: var(--main-font, "Inter", sans-serif);
   font-size: var(--text-font-size, 18px);
+  text-rendering: optimizeLegibility;
   background-image: var(--background-gradients);
   background-size: cover;
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: "wght" var(--text-weight, 400);
-  text-rendering: optimizeLegibility;
 }
 
 .header {
@@ -181,8 +177,7 @@
   overflow: hidden;
   line-height: 0.9;
   background-color: var(--content-block-background, #fff);
-  transition: box-shadow 0.3s ease, 
-              border 0.3s ease;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
   cursor: pointer;
 }
 
@@ -195,7 +190,7 @@
 }
 
 .button:not(.card__icon-button)::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -214,9 +209,9 @@
 .button__text {
   position: relative;
   z-index: 2;
+  color: var(--content-block-background, #fff);
   font-family: var(--accent-font, "Press Start 2P", fantasy);
   font-size: var(--accent-font-size, 14px);
-  color: var(--content-block-background, #fff);
   mix-blend-mode: difference;
 }
 
@@ -251,9 +246,9 @@
 .save-button .button__icon {
   position: relative;
   z-index: 2;
+  color: var(--content-block-background, #fff);
   inline-size: 21px;
   block-size: 21px;
-  color: var(--content-block-background, #fff);
   mix-blend-mode: difference;
 }
 
@@ -294,7 +289,6 @@
   inline-size: 39px;
   block-size: 39px;
 }
-
 
 @media (width <= 375px) {
   .save-button {

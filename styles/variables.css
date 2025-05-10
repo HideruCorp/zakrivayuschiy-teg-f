@@ -31,16 +31,20 @@
       var(--main-background-color) 2px,
       var(--main-background-color) 4px
     ),
-    linear-gradient(to bottom, var(--dots-gradient-start) 0%, var(--dots-gradient-end) 100%);
+    linear-gradient(
+      to bottom,
+      var(--dots-gradient-start) 0%,
+      var(--dots-gradient-end) 100%
+    );
 
-    /* цвета */
-    --content-block-background: #fff;
-    --content-block-border-color: #000;
-    --text-color: #000;
-    --stroke-color: #fff;
-    --accent-color: #f00;
-    --button-text-color: #fff;
-    --button-hover-background: #000;
-    --contour-color: #000;
-    --sparks-color: #f00; 
+  /* цвета */
+  --content-block-background: #fff;
+  --content-block-border-color: #000;
+  --text-color: #000;
+  --stroke-color: #fff;
+  --accent-color: #f00;
+  --button-text-color: #fff;
+  --button-hover-background: #000;
+  --contour-color: #000;
+  --sparks-color: #f00;
 }
